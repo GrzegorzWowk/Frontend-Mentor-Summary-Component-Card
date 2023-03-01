@@ -46,6 +46,8 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 375px;
+  background-color: hsl(221, 100%, 96%);
+  border-radius: 2rem;
 }
 .card__result {
   background-image: -webkit-gradient(linear, left top, left bottom, from(hsl(252, 100%, 67%)), to(hsl(241, 81%, 54%)));
@@ -106,14 +108,29 @@ body {
 }
 .card__result-text {
   color: hsl(0, 0%, 100%);
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   font-size: 2rem;
 }
 .card__result-describe {
   color: hsl(0, 0%, 100%);
-  padding: 1.5em;
+  padding: 0.5em 5em;
   font-size: 1.5rem;
+  margin-bottom: 1em;
 }
 .card__summary {
+  background-color: hsl(221, 100%, 96%);
+  padding: 0 1.5em;
+}
+.card__summary-title {
+  font-weight: bold;
+  margin: 1.5rem 0 1.2rem 2rem;
+}
+.card__summary-properties {
+  padding: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
   background-color: red;
 }/*# sourceMappingURL=style.css.map */
