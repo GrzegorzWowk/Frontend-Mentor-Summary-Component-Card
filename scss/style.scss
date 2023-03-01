@@ -1,3 +1,5 @@
+@use "variables" as *;
+
 *,
 *::after,
 *::before {
@@ -8,4 +10,77 @@
 html {
 	scroll-behavior: smooth;
 	font-size: 62.5%;
+}
+body {
+	height: 100vh;
+	background-color: $LightLavender;
+}
+.wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	margin: 0 auto;
+	max-width: 1200px;
+
+	margin-top: 1.5rem;
+}
+.card {
+	display: flex;
+	flex-direction: column;
+	width: 375px;
+
+	&__result {
+		background-image: linear-gradient($LightSlateBlue, $LightRoyalBlue);
+		border-radius: 2rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		&-info {
+			color: $White;
+			text-align: center;
+			margin-top: 2rem;
+			font-size: 2rem;
+		}
+		&-circle {
+			width: 12rem;
+			height: 12rem;
+			border-radius: 50%;
+			background-color: $VioletBlue;
+			margin-top: 1rem;
+			display: flex;
+			flex-direction: column;
+			text-align: center;
+			justify-content: center;
+			position: relative;
+		}
+		&-one {
+			font-size: 5.5rem;
+			color: $White;
+			font-weight: bold;
+		}
+		&-max {
+			position: absolute;
+			font-size: 1.5rem;
+			bottom: 10%;
+			left: 50%;
+			transform: translate(-50%);
+			color: $LightLavender;
+		}
+		&-text {
+			color: $White;
+			margin-top: 1rem;
+			font-size: 2rem;
+		}
+		&-describe {
+			color: $White;
+			padding: 1.5em;
+			font-size: 1.5rem;
+		}
+	}
+	&__summary {
+		background-color: red;
+	}
 }

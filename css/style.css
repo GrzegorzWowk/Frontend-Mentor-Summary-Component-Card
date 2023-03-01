@@ -1,3 +1,7 @@
+/* Primary*/
+/*backgound*/
+/*circle*/
+/*neutral*/
 *,
 *::after,
 *::before {
@@ -10,4 +14,106 @@
 html {
   scroll-behavior: smooth;
   font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  background-color: hsl(241, 100%, 89%);
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1200px;
+  margin-top: 1.5rem;
+}
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 375px;
+}
+.card__result {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(hsl(252, 100%, 67%)), to(hsl(241, 81%, 54%)));
+  background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+  border-radius: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.card__result-info {
+  color: hsl(0, 0%, 100%);
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 2rem;
+}
+.card__result-circle {
+  width: 12rem;
+  height: 12rem;
+  border-radius: 50%;
+  background-color: hsl(256, 72%, 46%);
+  margin-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+.card__result-one {
+  font-size: 5.5rem;
+  color: hsl(0, 0%, 100%);
+  font-weight: bold;
+}
+.card__result-max {
+  position: absolute;
+  font-size: 1.5rem;
+  bottom: 10%;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  color: hsl(241, 100%, 89%);
+}
+.card__result-text {
+  color: hsl(0, 0%, 100%);
+  margin-top: 1rem;
+  font-size: 2rem;
+}
+.card__result-describe {
+  color: hsl(0, 0%, 100%);
+  padding: 1.5em;
+  font-size: 1.5rem;
+}
+.card__summary {
+  background-color: red;
 }/*# sourceMappingURL=style.css.map */
