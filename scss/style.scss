@@ -13,7 +13,7 @@ html {
 }
 body {
 	height: 100vh;
-	background-color: $LightLavender;
+	background-color: $PaleBlue;
 }
 .wrapper {
 	display: flex;
@@ -31,10 +31,12 @@ body {
 	width: 375px;
 	background-color: $PaleBlue;
 	border-radius: 2rem;
+	margin-top: 1rem;
+	box-shadow:$LightSlateBlue 0px 5px 15px;
 
 	&__result {
 		background-image: linear-gradient($LightSlateBlue, $LightRoyalBlue);
-		border-radius: 2rem;
+		border-radius: 1.5rem;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -50,7 +52,7 @@ body {
 			width: 12rem;
 			height: 12rem;
 			border-radius: 50%;
-			background-color: $VioletBlue;
+			background-image: linear-gradient($LightRoyalBlue, $LightSlateBlue);
 			margin-top: 1rem;
 			display: flex;
 			flex-direction: column;
@@ -86,18 +88,93 @@ body {
 	&__summary {
 		background-color: $PaleBlue;
 		padding: 0 1.5em;
+		border-radius: 2rem;
 
 		&-title {
 			font-weight: bold;
 			margin: 1.5rem 0 1.2rem 2rem;
 		}
 		&-properties {
-			padding: 1em;
 			display: flex;
+			padding: 1em;
 			margin-bottom: 1rem;
 			border-radius: 1rem;
-			background-color: red;
-			
+			background-color: $LightLavender;
+			width: 100%;
+		}
+		&-properties:first-of-type {
+			background-color: hsla(0, 100%, 67%, 0.155);
+		}
+		&-properties:nth-of-type(2) {
+			background-color: hsla(39, 100%, 56%, 0.146);
+		}
+		&-properties:nth-of-type(3) {
+			background-color: hsla(166, 100%, 37%, 0.158);
+		}
+		&-properties:nth-of-type(4) {
+			background-color: hsla(234, 85%, 45%, 0.151);
+		}
+		&-info {
+			font-size: 1.5rem;
+			margin-left: 1rem;
+		}
+		&-result {
+			margin-left: auto;
+			font-size: 1.5rem;
+		}
+		&-reaction-info {
+			color: $LightRed;
+		}
+		&-memory-info {
+			color: $OrangeYellow;
+		}
+		&-verbal-info {
+			color: $GreenTeal;
+		}
+		&-visual-info {
+			color: $CobaltBlue;
+		}
+	}
+	&__continue {
+		margin-top: 1rem;
+		width: 100%;
+		border-radius: 30px;
+		padding: 1em;
+		margin-bottom: 1rem;
+		border: none;
+		background-color: $DarkGrayBlue;
+		letter-spacing: 1px;
+		color: $White;
+		cursor: pointer;
+		transition: background-color 0.3s;
+	}
+	&__continue:focus,
+	&__continue:hover {
+		background-color: $LightRoyalBlue;
+	}
+}
+
+@media (min-width: 800px) {
+	body {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.card {
+		flex-direction: row;
+		width: 600px;
+		&__result {
+			width: 50%;
+			padding: 1em;
+			&-describe{
+				padding: 0.5em 2em;
+			}
+		}
+		&__summary {
+			width: 50%;
+		}
+		&__continue {
+			margin-bottom: 1.5rem;
 		}
 	}
 }
